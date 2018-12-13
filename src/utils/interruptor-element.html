@@ -1,0 +1,44 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="interruptor-element">
+    <template>
+        <style>
+            :host {
+                display: block
+            }
+        </style>
+
+        [[activo]]
+
+    </template>
+
+    <script>
+        class InterruptorElement extends Polymer.Element {
+            /**
+             * String providing the tag name to register the element under.
+             */
+            static get is() {
+                return 'interruptor-element';
+            }
+
+            /**
+             * Object describing property-related metadata used by Polymer features
+             */
+            static get properties() {
+                return {
+                    activo: {
+                        type: Boolean,
+                        value: false
+                    }
+                };
+            }
+
+            ready() {
+                super.ready();
+            }
+
+        }
+
+        window.customElements.define(InterruptorElement.is, InterruptorElement);
+    </script>
+</dom-module>
